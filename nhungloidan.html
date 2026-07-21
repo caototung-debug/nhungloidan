@@ -1,285 +1,286 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title> Lời Chúc </title>
-
-    <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            font-family:"Times New Roman",serif;
-            overflow:hidden;
-        }
-
-        .scene{
-            width:100%;
-            height:100vh;
-
-            background:
-                linear-gradient(rgba(255,255,255,.25),rgba(255,220,220,.4)),
-                url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&q=80");
-
-            background-size:cover;
-            background-position:center;
-            position:relative;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            animation:bg 15s infinite alternate;
-        }
+<title>Lời Chúc</title>
 
-        @keyframes bg{
-            from{
-                background-size:100%;
-            }
-            to{
-                background-size:110%;
-            }
-        }
+<style>
 
-        /* Mặt trời */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .sun{
-            position:absolute;
+body{
+    font-family:"Times New Roman",serif;
+    overflow:hidden;
+}
 
-            width:140px;
-            height:140px;
+.scene{
 
-            background:#ff5252;
-            border-radius:50%;
+    width:100%;
+    height:100vh;
 
-            top:70px;
-            right:160px;
+    background:
+    linear-gradient(rgba(255,255,255,.25),rgba(255,220,220,.45)),
+    url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&q=80");
 
-            box-shadow:0 0 40px #ff8a80;
-        }
+    background-size:cover;
+    background-position:center;
+    position:relative;
 
-        /* Hoa anh đào */
+}
 
-        .sakura{
-            position:absolute;
-            top:-40px;
-            font-size:32px;
-            animation:drop linear infinite;
-        }
+/* Mặt trời */
 
-        .s1{
-            left:10%;
-            animation-duration:9s;
-        }
+.sun{
 
-        .s2{
-            left:30%;
-            animation-duration:12s;
-        }
+    position:absolute;
 
-        .s3{
-            left:55%;
-            animation-duration:10s;
-        }
+    width:140px;
+    height:140px;
 
-        .s4{
-            left:80%;
-            animation-duration:13s;
-        }
+    background:#ff4b4b;
 
-        @keyframes drop{
-            from{
-                transform:translateY(-100px) rotate(0deg);
-            }
-            to{
-                transform:translateY(110vh) rotate(360deg);
-            }
-        }
+    border-radius:50%;
 
-        /* Cổng Torii */
+    top:50px;
+    right:120px;
 
-        .torii{
-            position:absolute;
-            left:20px;
-            bottom:0;
-            font-size:150px;
-        }
+    box-shadow:0 0 45px #ff8a80;
 
-        /* Tre */
+}
 
-        .bamboo{
-            position:absolute;
-            right:20px;
-            bottom:0;
-            font-size:120px;
-        }
+/* Hoa */
 
-        /* Khung */
+.sakura{
 
-        .card{
+    position:absolute;
 
-            position:absolute;
+    top:-60px;
 
-            top:50%;
-            left:50%;
+    font-size:30px;
 
-            transform:translate(-50%,-50%);
+    animation:fall linear infinite;
 
-            width:min(92%,650px);
+}
 
-            background:rgba(255,255,255,.9);
+.s1{left:10%;animation-duration:8s;}
+.s2{left:30%;animation-duration:10s;}
+.s3{left:55%;animation-duration:9s;}
+.s4{left:80%;animation-duration:11s;}
 
-            padding:35px;
+@keyframes fall{
 
-            border-radius:20px;
+from{
 
-            text-align:center;
+transform:translateY(-100px) rotate(0deg);
 
-            border:5px solid #c62828;
+}
 
-            box-shadow:0 0 35px rgba(0,0,0,.3);
+to{
 
-            animation:appear 1.5s;
-        }
+transform:translateY(110vh) rotate(360deg);
 
-        @keyframes appear{
+}
 
-            from{
-                opacity:0;
-                transform:translate(-50%,-35%);
-            }
+}
 
-            to{
-                opacity:1;
-                transform:translate(-50%,-50%);
-            }
+/* Torii */
 
-        }
+.torii{
 
-        h1{
-            color:#b71c1c;
-            font-size:42px;
-            margin-bottom:20px;
-        }
+position:absolute;
 
-        p{
-            color:#4e342e;
-            font-size:22px;
-            line-height:1.7;
-        }
+left:20px;
+bottom:0;
 
-        .wish{
+font-size:150px;
 
-            margin-top:25px;
+}
 
-            padding:20px;
+/* Tre */
 
-            background:#fff5f5;
+.bamboo{
 
-            border-radius:15px;
+position:absolute;
 
-            font-size:20px;
+right:15px;
+bottom:0;
 
-            color:#6d1b1b;
+font-size:120px;
 
-            animation:float 3s infinite;
+}
 
-        }
+/* Card */
 
-        @keyframes float{
+.card{
 
-            0%,100%{
-                transform:translateY(0);
-            }
+position:absolute;
 
-            50%{
-                transform:translateY(-8px);
-            }
+top:50%;
+left:50%;
 
-        }
+transform:translate(-50%,-50%);
 
-        button{
+width:min(92%,650px);
 
-            margin-top:25px;
+padding:35px;
 
-            padding:14px 35px;
+background:rgba(255,255,255,.9);
 
-            background:#b71c1c;
+border-radius:20px;
 
-            color:white;
+border:4px solid #b71c1c;
 
-            border:none;
+box-shadow:0 0 30px rgba(0,0,0,.3);
 
-            border-radius:30px;
+text-align:center;
 
-            font-size:18px;
+}
 
-            cursor:pointer;
+.card h1{
 
-            transition:.3s;
+color:#b71c1c;
 
-        }
+font-size:40px;
 
-        button:hover{
+margin-bottom:20px;
 
-            background:#880e4f;
+}
 
-            transform:scale(1.08);
+.card p{
 
-        }
+font-size:22px;
 
-        /* Responsive */
+line-height:1.7;
 
-        @media(max-width:768px){
+color:#4e342e;
 
-            .card{
-                width:92%;
-                padding:22px;
-            }
+}
 
-            h1{
-                font-size:28px;
-            }
+.wish{
 
-            p{
-                font-size:18px;
-            }
+margin-top:25px;
 
-            .wish{
-                font-size:16px;
-            }
+padding:20px;
 
-            button{
-                width:100%;
-            }
+background:#fff5f5;
 
-            .sun{
-                width:90px;
-                height:90px;
-                top:20px;
-                right:20px;
-            }
+border-radius:15px;
 
-            .torii{
-                font-size:90px;
-                left:5px;
-            }
+font-size:20px;
 
-            .bamboo{
-                font-size:70px;
-                right:5px;
-            }
+color:#6d1b1b;
 
-            .sakura{
-                font-size:22px;
-            }
+}
 
-        }
+button{
 
-    </style>
+margin-top:25px;
+
+padding:14px 35px;
+
+font-size:18px;
+
+background:#c62828;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#880e4f;
+
+transform:scale(1.08);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.sun{
+
+width:80px;
+height:80px;
+
+top:20px;
+right:20px;
+
+}
+
+.torii{
+
+font-size:80px;
+
+left:5px;
+
+}
+
+.bamboo{
+
+font-size:65px;
+
+right:5px;
+
+}
+
+.card{
+
+width:92%;
+
+padding:20px;
+
+}
+
+.card h1{
+
+font-size:28px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+}
+
+.wish{
+
+font-size:16px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.sakura{
+
+font-size:20px;
+
+}
+
+}
+
+</style>
 
 </head>
 
@@ -287,43 +288,51 @@
 
 <div class="scene">
 
-    <div class="sun"></div>
+<div class="sun"></div>
 
-    <div class="sakura s1">🌸</div>
-    <div class="sakura s2">🌸</div>
-    <div class="sakura s3">🌸</div>
-    <div class="sakura s4">🌸</div>
+<div class="sakura s1">🌸</div>
+<div class="sakura s2">🌸</div>
+<div class="sakura s3">🌸</div>
+<div class="sakura s4">🌸</div>
 
-    <div class="torii">⛩️</div>
+<div class="torii">⛩️</div>
 
-    <div class="bamboo">🎋</div>
+<div class="bamboo">🎋</div>
 
-    <div class="card">
+<div class="card">
 
-        <h1>🌸 Những Lời Chúc 🌸</h1>
+<h1>🌸 Những Lời Chúc 🌸</h1>
 
-        <p>
-            心からの願い<br>
-            (Những lời chúc xuất phát từ trái tim)
-        </p>
+<p>
 
-        <div class="wish">
+心からの願い
 
-            🌸 Chúc bạn luôn bình an và hạnh phúc.<br><br>
+<br><br>
 
-            🎋 Mong mọi ước mơ đều trở thành hiện thực.<br><br>
+(Những lời chúc xuất phát từ trái tim)
 
-            ⛩️ Chúc mỗi ngày của bạn đều tràn đầy may mắn.
+</p>
 
-        </div>
+<div class="wish">
 
-        <button onclick="alert('幸せになりますように 🌸')">
-            Nhận lời chúc
-        </button>
+🌸 Chúc bạn luôn bình an và hạnh phúc.<br><br>
 
-    </div>
+🎋 Mong mọi ước mơ đều trở thành hiện thực.<br><br>
+
+⛩️ Chúc mỗi ngày của bạn đều tràn đầy may mắn.
+
+</div>
+
+<button onclick="alert('幸せになりますように 🌸')">
+
+Nhận lời chúc
+
+</button>
+
+</div>
 
 </div>
 
 </body>
+
 </html>
