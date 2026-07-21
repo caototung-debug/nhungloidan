@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Chào Mừng</title>
 
+    <!-- Chuyển sang nhungloidan.html sau 5 giây -->
     <meta http-equiv="refresh" content="5;url=nhungloidan.html">
 
     <style>
@@ -22,41 +22,67 @@
         }
 
         .background{
+
             width:100%;
             height:100vh;
-            position:relative;
+
             background:
-            linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
-            url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80");
+                linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+                url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1920&q=80");
+
             background-size:cover;
             background-position:center;
+
+            position:relative;
+
         }
 
+        /* Máy bay */
+
         .airplane{
+
             position:absolute;
+
             font-size:65px;
-            left:-100px;
+
+            left:-120px;
+
             top:18%;
+
             animation:fly 5s linear infinite;
+
         }
 
         @keyframes fly{
+
             from{
-                left:-100px;
+
+                left:-120px;
                 top:20%;
+
             }
 
             to{
+
                 left:110%;
                 top:8%;
+
             }
+
         }
 
+        /* Hoa anh đào */
+
         .sakura{
+
             position:absolute;
+
             top:-50px;
-            font-size:28px;
+
+            font-size:30px;
+
             animation:fall linear infinite;
+
         }
 
         .s1{
@@ -91,6 +117,8 @@
 
         }
 
+        /* Khung */
+
         .message{
 
             position:absolute;
@@ -102,19 +130,19 @@
 
             width:min(90%,650px);
 
-            background:rgba(255,255,255,.88);
-
-            border-radius:20px;
+            background:rgba(255,255,255,.9);
 
             padding:35px;
 
+            border-radius:20px;
+
             text-align:center;
 
-            box-shadow:0 0 30px rgba(0,0,0,.4);
+            box-shadow:0 0 30px rgba(0,0,0,.35);
 
         }
 
-        h1{
+        .message h1{
 
             color:#d81b60;
 
@@ -124,26 +152,27 @@
 
         }
 
-        p{
-
-            font-size:22px;
+        .message p{
 
             color:#444;
+
+            font-size:22px;
 
             line-height:1.7;
 
         }
 
+        /* Thanh loading */
+
         .loading{
 
-            margin-top:30px;
+            margin-top:25px;
 
         }
 
         .bar{
 
             width:100%;
-
             height:12px;
 
             background:#ddd;
@@ -178,6 +207,8 @@
 
         }
 
+        /* Responsive */
+
         @media(max-width:768px){
 
             .message{
@@ -188,13 +219,13 @@
 
             }
 
-            h1{
+            .message h1{
 
                 font-size:30px;
 
             }
 
-            p{
+            .message p{
 
                 font-size:18px;
 
@@ -202,7 +233,7 @@
 
             .airplane{
 
-                font-size:42px;
+                font-size:45px;
 
             }
 
