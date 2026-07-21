@@ -1,338 +1,285 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Những Lời Chúc Nhật Bản</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Những Lời Chúc Nhật Bản</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:"Times New Roman",serif;
+            overflow:hidden;
+        }
+
+        .scene{
+            width:100%;
+            height:100vh;
 
-<style>
+            background:
+                linear-gradient(rgba(255,255,255,.25),rgba(255,220,220,.4)),
+                url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&q=80");
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+            background-size:cover;
+            background-position:center;
+            position:relative;
 
-body{
-    font-family:"Times New Roman",serif;
-    overflow:hidden;
-}
+            animation:bg 15s infinite alternate;
+        }
 
-.scene{
+        @keyframes bg{
+            from{
+                background-size:100%;
+            }
+            to{
+                background-size:110%;
+            }
+        }
 
-    width:100%;
-    height:100vh;
+        /* Mặt trời */
 
-    background:
-        linear-gradient(rgba(255,255,255,.25),rgba(255,220,220,.4)),
-        url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=1920&q=80");
+        .sun{
+            position:absolute;
 
-    background-size:cover;
-    background-position:center;
+            width:140px;
+            height:140px;
 
-    position:relative;
+            background:#ff5252;
+            border-radius:50%;
 
-    animation:bg 15s infinite alternate;
+            top:70px;
+            right:160px;
 
-}
+            box-shadow:0 0 40px #ff8a80;
+        }
 
-@keyframes bg{
+        /* Hoa anh đào */
 
-from{
-    background-size:100%;
-}
+        .sakura{
+            position:absolute;
+            top:-40px;
+            font-size:32px;
+            animation:drop linear infinite;
+        }
 
-to{
-    background-size:110%;
-}
+        .s1{
+            left:10%;
+            animation-duration:9s;
+        }
 
-}
+        .s2{
+            left:30%;
+            animation-duration:12s;
+        }
 
-.sun{
+        .s3{
+            left:55%;
+            animation-duration:10s;
+        }
 
-    position:absolute;
+        .s4{
+            left:80%;
+            animation-duration:13s;
+        }
 
-    width:150px;
-    height:150px;
+        @keyframes drop{
+            from{
+                transform:translateY(-100px) rotate(0deg);
+            }
+            to{
+                transform:translateY(110vh) rotate(360deg);
+            }
+        }
 
-    background:#ff5252;
+        /* Cổng Torii */
 
-    border-radius:50%;
+        .torii{
+            position:absolute;
+            left:20px;
+            bottom:0;
+            font-size:150px;
+        }
 
-    top:70px;
-    right:170px;
+        /* Tre */
 
-    box-shadow:0 0 40px #ff8a80;
+        .bamboo{
+            position:absolute;
+            right:20px;
+            bottom:0;
+            font-size:120px;
+        }
 
-}
+        /* Khung */
 
-.sakura{
+        .card{
 
-    position:absolute;
+            position:absolute;
 
-    top:-50px;
+            top:50%;
+            left:50%;
 
-    font-size:35px;
+            transform:translate(-50%,-50%);
 
-    animation:drop linear infinite;
+            width:min(92%,650px);
 
-}
+            background:rgba(255,255,255,.9);
 
-.s1{
-left:10%;
-animation-duration:9s;
-}
+            padding:35px;
 
-.s2{
-left:30%;
-animation-duration:12s;
-}
+            border-radius:20px;
 
-.s3{
-left:55%;
-animation-duration:10s;
-}
+            text-align:center;
 
-.s4{
-left:80%;
-animation-duration:13s;
-}
+            border:5px solid #c62828;
 
-@keyframes drop{
+            box-shadow:0 0 35px rgba(0,0,0,.3);
 
-from{
-transform:translateY(-100px) rotate(0deg);
-}
+            animation:appear 1.5s;
+        }
 
-to{
-transform:translateY(110vh) rotate(360deg);
-}
+        @keyframes appear{
 
-}
+            from{
+                opacity:0;
+                transform:translate(-50%,-35%);
+            }
 
-.torii{
+            to{
+                opacity:1;
+                transform:translate(-50%,-50%);
+            }
 
-position:absolute;
+        }
 
-bottom:0;
-left:40px;
+        h1{
+            color:#b71c1c;
+            font-size:42px;
+            margin-bottom:20px;
+        }
 
-font-size:170px;
+        p{
+            color:#4e342e;
+            font-size:22px;
+            line-height:1.7;
+        }
 
-}
+        .wish{
 
-.bamboo{
+            margin-top:25px;
 
-position:absolute;
+            padding:20px;
 
-right:20px;
-bottom:0;
+            background:#fff5f5;
 
-font-size:120px;
+            border-radius:15px;
 
-}
+            font-size:20px;
 
-.card{
+            color:#6d1b1b;
 
-position:absolute;
+            animation:float 3s infinite;
 
-top:50%;
-left:50%;
+        }
 
-transform:translate(-50%,-50%);
+        @keyframes float{
 
-width:min(92%,650px);
+            0%,100%{
+                transform:translateY(0);
+            }
 
-background:rgba(255,255,255,.88);
+            50%{
+                transform:translateY(-8px);
+            }
 
-padding:35px;
+        }
 
-border-radius:20px;
+        button{
 
-text-align:center;
+            margin-top:25px;
 
-border:5px solid #c62828;
+            padding:14px 35px;
 
-box-shadow:0 0 40px rgba(0,0,0,.3);
+            background:#b71c1c;
 
-animation:appear 1.5s;
+            color:white;
 
-}
+            border:none;
 
-@keyframes appear{
+            border-radius:30px;
 
-from{
+            font-size:18px;
 
-opacity:0;
+            cursor:pointer;
 
-transform:translate(-50%,-35%);
+            transition:.3s;
 
-}
+        }
 
-to{
+        button:hover{
 
-opacity:1;
+            background:#880e4f;
 
-transform:translate(-50%,-50%);
+            transform:scale(1.08);
 
-}
+        }
 
-}
+        /* Responsive */
 
-h1{
+        @media(max-width:768px){
 
-font-size:42px;
+            .card{
+                width:92%;
+                padding:22px;
+            }
 
-color:#b71c1c;
+            h1{
+                font-size:28px;
+            }
 
-margin-bottom:20px;
+            p{
+                font-size:18px;
+            }
 
-}
+            .wish{
+                font-size:16px;
+            }
 
-p{
+            button{
+                width:100%;
+            }
 
-font-size:22px;
+            .sun{
+                width:90px;
+                height:90px;
+                top:20px;
+                right:20px;
+            }
 
-color:#4e342e;
+            .torii{
+                font-size:90px;
+                left:5px;
+            }
 
-line-height:1.7;
+            .bamboo{
+                font-size:70px;
+                right:5px;
+            }
 
-}
+            .sakura{
+                font-size:22px;
+            }
 
-.wish{
+        }
 
-margin-top:25px;
-
-padding:20px;
-
-background:#fff5f5;
-
-border-radius:15px;
-
-font-size:20px;
-
-color:#6d1b1b;
-
-animation:float 3s infinite;
-
-}
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-8px);
-}
-
-}
-
-button{
-
-margin-top:25px;
-
-padding:14px 35px;
-
-font-size:18px;
-
-border:none;
-
-border-radius:30px;
-
-background:#b71c1c;
-
-color:white;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-background:#880e4f;
-
-transform:scale(1.08);
-
-}
-
-/* ================= Responsive ================= */
-
-@media(max-width:768px){
-
-.sun{
-
-width:90px;
-height:90px;
-
-top:20px;
-right:20px;
-
-}
-
-.torii{
-
-font-size:90px;
-left:5px;
-
-}
-
-.bamboo{
-
-font-size:70px;
-right:5px;
-
-}
-
-.card{
-
-width:92%;
-
-padding:20px;
-
-}
-
-h1{
-
-font-size:28px;
-
-}
-
-p{
-
-font-size:18px;
-
-}
-
-.wish{
-
-font-size:16px;
-
-padding:15px;
-
-}
-
-button{
-
-width:100%;
-
-font-size:18px;
-
-}
-
-.sakura{
-
-font-size:22px;
-
-}
-
-}
-
-</style>
+    </style>
 
 </head>
 
@@ -340,46 +287,41 @@ font-size:22px;
 
 <div class="scene">
 
-<div class="sun"></div>
+    <div class="sun"></div>
 
-<div class="sakura s1">🌸</div>
-<div class="sakura s2">🌸</div>
-<div class="sakura s3">🌸</div>
-<div class="sakura s4">🌸</div>
+    <div class="sakura s1">🌸</div>
+    <div class="sakura s2">🌸</div>
+    <div class="sakura s3">🌸</div>
+    <div class="sakura s4">🌸</div>
 
-<div class="torii">⛩️</div>
+    <div class="torii">⛩️</div>
 
-<div class="bamboo">🎋</div>
+    <div class="bamboo">🎋</div>
 
-<div class="card">
+    <div class="card">
 
-<h1>🌸 Những Lời Chúc 🌸</h1>
+        <h1>🌸 Những Lời Chúc 🌸</h1>
 
-<p>
+        <p>
+            心からの願い<br>
+            (Những lời chúc xuất phát từ trái tim)
+        </p>
 
-心からの願い<br>
+        <div class="wish">
 
-(Những lời chúc xuất phát từ trái tim)
+            🌸 Chúc bạn luôn bình an và hạnh phúc.<br><br>
 
-</p>
+            🎋 Mong mọi ước mơ đều trở thành hiện thực.<br><br>
 
-<div class="wish">
+            ⛩️ Chúc mỗi ngày của bạn đều tràn đầy may mắn.
 
-🌸 Chúc bạn luôn bình an và hạnh phúc.<br><br>
+        </div>
 
-🎋 Mong mọi ước mơ đều trở thành hiện thực.<br><br>
+        <button onclick="alert('幸せになりますように 🌸')">
+            Nhận lời chúc
+        </button>
 
-⛩️ Chúc mỗi ngày của bạn đều tràn đầy may mắn.
-
-</div>
-
-<button onclick="alert('幸せになりますように 🌸')">
-
-Nhận lời chúc
-
-</button>
-
-</div>
+    </div>
 
 </div>
 
